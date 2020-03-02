@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FocusOnXamarin.Views.MainView"
+    Title="Focus on Xamarin">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="BannerStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFill" />
+            </Style>
+
+            <Style x:Key="SectionContainerStyle" TargetType="FlexLayout">
+                <Setter Property="Wrap" Value="Wrap" />
+                <Setter Property="AlignContent" Value="Center" />
+                <Setter Property="AlignItems" Value="Center" />
+                <Setter Property="JustifyContent" Value="Center" />
+                <Setter Property="Padding" Value="12" />
+            </Style>
+
+            <Style x:Key="SectionButtonStyle" TargetType="ImageButton">
+                <Setter Property="HeightRequest" Value="120" />
+                <Setter Property="WidthRequest" Value="120" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image
+                    Grid.Row="0"
+                    Source="netconfxamarin"
+                    Style="{StaticResource BannerStyle}"/>
+                <FlexLayout
+                    Grid.Row="1"
+                    Style="{StaticResource SectionContainerStyle}">
+                    <ImageButton
+                        x:Name="CollectionViewGalleryBtn"
+                        Source="collection"
+                        Style="{StaticResource SectionButtonStyle}"
+                        Clicked="OnCollectionViewGalleryBtnClicked"/>
+                    <ImageButton 
+                        x:Name="CarouselViewGalleryBtn"
+                        Source="carousel"
+                        Style="{StaticResource SectionButtonStyle}"
+                        Clicked="OnCarouselViewGalleryBtnClicked"/>
+                    <ImageButton
+                        x:Name="IndicatorViewGalleryBtn"
+                        Source="indicator"
+                        Style="{StaticResource SectionButtonStyle}"
+                        Clicked="OnIndicatorViewGalleryBtnClicked"/>
+                    <ImageButton
+                        x:Name="RefreshViewGalleryBtn"
+                        Source="refresh"
+                        Style="{StaticResource SectionButtonStyle}"
+                        Clicked="OnRefreshViewGalleryBtnClicked"/>
+                    <ImageButton
+                        x:Name="SwipeViewGalleryBtn"
+                        Source="swipe"
+                        Style="{StaticResource SectionButtonStyle}"
+                        Clicked="OnSwipeViewGalleryBtnClicked"/>
+                </FlexLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" x:Class="FocusOnXamarin.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- COLORS -->
+            <Color x:Key="AccentColor">#380D5E</Color>
+            <Color x:Key="SecondaryColor">#5e4b0d</Color>
+            <Color x:Key="TertiaryColor">#335e0d</Color>
+            <Color x:Key="QuaternaryColor">#5e0d33</Color>
+            <Color x:Key="BlackColor">#000000</Color>
+            <Color x:Key="WhiteColor">#FFFFFF</Color>
+
+            <!-- STYLES -->
+            <Style TargetType="Button">
+                <Setter Property="Visual" Value="Material" />
+                <Setter Property="BackgroundColor" Value="{StaticResource QuaternaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="Margin" Value="6, 6, 6, 0" />
+            </Style>
+
+            <Style TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="{StaticResource QuaternaryColor}" />
+                <Setter Property="Padding" Value="24" />
+                <Setter Property="Margin" Value="6" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

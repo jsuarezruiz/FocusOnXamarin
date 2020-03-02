@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.ObjectModel;
+using Xamarin.Forms;
+
+namespace FocusOnXamarin.Views
+{
+	internal class ItemReplacer : ObservableCollectionModifier
+	{
+		public ItemReplacer(CollectionView cv) : base(cv, "Replace")
+		{
+		}
+
+		protected override void ModifyObservableCollection(ObservableCollection<CollectionViewGalleryTestItem> observableCollection, params int[] indexes)
+		{
+			var index = indexes[0];
+
+			if (index > -1 && index < observableCollection.Count)
+			{
+				var replacement = new CollectionViewGalleryTestItem(DateTime.Now, "Replacement", "add.png", index);
+				observableCollection[index] = replacement;
+			}
+		}
+	}
+}
