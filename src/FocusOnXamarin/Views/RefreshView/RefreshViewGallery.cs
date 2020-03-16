@@ -30,7 +30,8 @@ namespace FocusOnXamarin.Views
 					GalleryBuilder.NavButton("Refresh ListView Gallery", () => new RefreshListViewGallery(), Navigation),
 					GalleryBuilder.NavButton("Refresh CollectionView Gallery", () => new RefreshCollectionViewGallery(), Navigation),
 					GalleryBuilder.NavButton("Refresh CarouselView Gallery", () => new RefreshCarouselViewGallery(), Navigation),
-					GalleryBuilder.NavButton("Refresh WebView Gallery", () => new RefreshWebViewGallery(), Navigation)
+					GalleryBuilder.NavButton("Refresh WebView Gallery", () => new RefreshWebViewGallery(), Navigation),
+					GalleryBuilder.NavButton("Pull Direction Gallery (Windows Only)", () => new RefreshViewWindows(), Navigation)
 				}
 			};
 		}

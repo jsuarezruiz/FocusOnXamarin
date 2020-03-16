@@ -17,38 +17,61 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Slider x:Name="slider" Margin="5" Value="{Binding Position, Mode=TwoWay}" Maximum="{Binding Count}" Grid.ColumnSpan="2" />
-        <Label Text="{Binding Source={x:Reference slider},
-                      Path=Value,
-                      StringFormat='The current Position is {0}'}"
-                      VerticalTextAlignment="Center"
-                      VerticalOptions="Center"
-                      Grid.Column="0" Grid.Row="1" 
-                      Padding="7"/>
-        <Entry Text="{Binding Position}"
-                      VerticalTextAlignment="Center"
-                      VerticalOptions="Center"
-                      Grid.Column="1" Grid.Row="1"/>
-        <Label Text="{Binding Source={x:Reference carousel},
-                      Path=VisibleViews.Count,
-                      StringFormat='Number of VisibleViews {0}'}"
-                      VerticalTextAlignment="Center"
-                      VerticalOptions="Center"
-                      Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
-                      AutomationId="lblVisibleViews"
-                      Padding="7"/>
-        <CarouselView AutomationId="TheCarouselView" x:Name="carousel" ItemsSource="{Binding Items}" Position="{Binding Position}" Grid.Row="3" HeightRequest="400" Grid.ColumnSpan="2"
-                      PeekAreaInsets="50,0">
+        <Slider
+            x:Name="slider"
+            Margin="5"
+            Value="{Binding Position, Mode=TwoWay}"
+            Maximum="{Binding Count}" Grid.ColumnSpan="2" />
+        <Label
+            Text="{Binding Source={x:Reference slider},
+            Path=Value,
+            StringFormat='The current Position is {0}'}"
+            VerticalTextAlignment="Center"
+            VerticalOptions="Center"
+            Grid.Column="0" Grid.Row="1" 
+            Padding="7"/>
+        <Entry
+            Text="{Binding Position}"
+            VerticalTextAlignment="Center"
+            VerticalOptions="Center"
+            Grid.Column="1" Grid.Row="1"/>
+        <Label
+            Text="{Binding Source={x:Reference carousel},
+            Path=VisibleViews.Count,
+            StringFormat='Number of VisibleViews {0}'}"
+            VerticalTextAlignment="Center"
+            VerticalOptions="Center"
+            Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
+            AutomationId="lblVisibleViews"
+            Padding="7"/>
+        <CarouselView
+            AutomationId="TheCarouselView"
+            x:Name="carousel"
+            ItemsSource="{Binding Items}"
+            Position="{Binding Position}"
+            Grid.Row="3"
+            HeightRequest="400"
+            Grid.ColumnSpan="2"
+            PeekAreaInsets="50,0">
             <CarouselView.ItemTemplate>
                 <DataTemplate>
                     <gallery:ExampleTemplateCarousel />
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-
-        <Frame Margin="15" x:Name="layoutNormal" Grid.Row="4" Grid.ColumnSpan="2" HeightRequest="150" OutlineColor="#00000088" Padding="5">
+        <Frame
+            Margin="15"
+            x:Name="layoutNormal"
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            HeightRequest="150"
+            OutlineColor="#00000088"
+            Padding="5">
             <Grid>
-                <CarouselView x:Name="carouselNormal" ItemsSource="{Binding Items}" Position="{Binding Position}">
+                <CarouselView
+                    x:Name="carouselNormal"
+                    ItemsSource="{Binding Items}"
+                    Position="{Binding Position}">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <Image Source="{Binding Image}" Aspect="AspectFill" />
@@ -57,6 +80,10 @@
                 </CarouselView>
             </Grid>
         </Frame>
-        <IndicatorView x:Name="indicator" IndicatorColor="Gray" SelectedIndicatorColor="Black" Grid.Row="4"></IndicatorView>
+        <IndicatorView
+            x:Name="indicator"
+            IndicatorColor="Gray"
+            SelectedIndicatorColor="Black"
+            Grid.Row="4" />
     </Grid>
 </ContentPage>
