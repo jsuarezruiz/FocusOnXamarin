@@ -139,8 +139,8 @@
     <BundleResource Include="Resources\fruit02.jpg" />
     <BundleResource Include="Resources\fruit03.jpg" />
     <BundleResource Include="Resources\fruit04.jpg" />
-    <BundleResource Include="Resources\fruit05.jpeg" />
-    <BundleResource Include="Resources\fruit06.jpeg" />
+    <BundleResource Include="Resources\fruit05.jpg" />
+    <BundleResource Include="Resources\fruit06.jpg" />
     <BundleResource Include="Resources\delete.png" />
     <BundleResource Include="Resources\edit.png" />
     <BundleResource Include="Resources\add.png" />
